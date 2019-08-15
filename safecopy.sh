@@ -12,3 +12,5 @@ rsync   --exclude ".git/" \
 		--exclude "LICENSE-MIT.txt" \
 		--exclude "safecopy.sh" \
 		-avh --no-perms --backup . ~/;
+
+source ~/.bash_profile;
