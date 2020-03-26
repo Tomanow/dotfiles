@@ -1,6 +1,28 @@
-# Mathias’s dotfiles
+# Mathias's (modified) dotfiles
 
 ![Screenshot of my shell prompt](https://i.imgur.com/EkEtphC.png)
+
+## Tom's (simple) Setup
+
+This is recommended for, well, anyone I recommended updating dotfiles to. The following steps will
+not overwrite existing user dot files. The safecopy script will copy the dotfiles to the user's home 
+directory. Any existing files will be renamed as backups (default suffixed with `~`).
+
+1. Install (more minimal) dependencies with homebrew via shell script:
+
+```bash
+./brew.sh
+```
+
+2. Install the dotfiles via shell script
+
+```bash
+./safecopy.sh
+```
+
+On Mac OS, you probably also want to import the style profile in the `init` directory to your Terminal.
+
+---
 
 ## Installation
 
