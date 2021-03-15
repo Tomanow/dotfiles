@@ -79,6 +79,12 @@
 		fi \
 	}; f"
 
+    # "Delete untracked" removes stale local branches with no tracked upstream branch
+    dut = "!f() { \
+        git fetch -p && for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | \
+            awk '$2 == \"[gone]\" {sub(\"refs/heads/\", \"\", $1); print $1}'); do git branch -D $branch; done; \
+    }; f"
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
